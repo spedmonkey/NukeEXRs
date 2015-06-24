@@ -1,0 +1,9 @@
+#set all read nodes to loop
+
+for i in nuke.allNodes():
+  try:
+    i['before'].setValue('loop')
+    i['after'].setValue('loop')
+    print 'loop set'
+  except:
+    print 'fail'
